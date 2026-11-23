@@ -1,6 +1,5 @@
 
 import streamlit as st
-import pandas as pd
 import math
 
 st.set_page_config(
@@ -133,16 +132,6 @@ if st.button("Calcular resultados", type="primary"):
         "Probabilidad estimada de clasificar en el corte",
         f"{porcentaje:.2f}%"
     )
-
-    st.subheader("Distribución visual")
-
-    grafico = pd.DataFrame({
-        "Equipos estimados": lista_equipos
-    }, index=[
-        f"{i} {nombre}" for i in range(len(lista_equipos))
-    ])
-
-    st.bar_chart(grafico)
 
     st.caption(
         "Los resultados son estimaciones basadas en una "
